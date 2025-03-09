@@ -29,18 +29,20 @@ def Channel_Operation_Gen():
 	return string
 
 def start(): 
-	n = int(sys.argv[1])
-	if(n<=0):
-		print("\nError")
+	try:
+		n = int(sys.argv[1])
+		with open("result.txt", "w") as file:
+			file.write("2359275\n")
+			for i in range(n):
+				channel = Channel_Operation_Gen()
+				try:
+					res = eval(channel)
+					file.write(channel +" = " + str(round(res,2))+"\n")
+				except Exception as e:
+					continue
+	except Exception as e:
+		print("\nError the value of n is not valid")
 		exit()
-	with open("result.txt", "w") as file:
-		file.write("2359275\n")
-		for i in range(n):
-			channel = Channel_Operation_Gen()
-			try:
-				res = eval(channel)
-				file.write(channel +" = " + str(round(res,2))+"\n")
-			except Exception as e:
-				continue
+	
 		
 start()
