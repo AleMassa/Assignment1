@@ -3,12 +3,13 @@
 A Python project that generates random mathematical exercises, evaluates them, and writes the results to result.txt.
 
 ## Project Overview 
-This program creates a set of random mathematical operations (addition, subtraction, multiplication, and division) and outputs the results to a file. The number of exercises is specified by the user.
+This program creates a set of random mathematical operations (addition, subtraction, multiplication, and division) and outputs the results to a file. The number of exercises is specified by the user through the comand line.
 
 
 ##  File Structure 
   Calc_Demo.py       # Main program that generates and evaluates expressions
-  result.txt      # The file generated after running the program
+  result.txt         # The file generated after running the program
+  Es.exe             # Executable file [specify the value of n into the command line to avoid to raise any exception]
 
 
 ##  How It Works 
