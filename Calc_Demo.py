@@ -1,4 +1,5 @@
 import random as rand
+import sys
 
 def Number_Generator():
 	num = rand.randint(0, 100)
@@ -28,7 +29,7 @@ def Channel_Operation_Gen():
 	return string
 
 def start(): 
-	n = int(input("Insert the value of n: "))
+	n = int(sys.argv[1])
 	if(n<=0):
 		print("\nError")
 		exit()
